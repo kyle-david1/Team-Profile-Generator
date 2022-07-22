@@ -10,4 +10,7 @@ class Intern extends Employee {
   getRole() {return 'Intern'};
 }
 
-module.exports
+
+
+
+module.exports = Intern;

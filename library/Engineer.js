@@ -9,3 +9,6 @@ getGithub() {return this.githubUsername};
 getRole() {return 'Engineer'};
 
 }
+
+module.exports = Engineer;
+

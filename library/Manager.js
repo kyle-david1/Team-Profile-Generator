@@ -1,4 +1,6 @@
+const inquirer = require('inquirer');
 const Employee = require('./Employee');
+
 
 class Manager extends Employee {
   constructor(name, id, email, officeNumber) {
@@ -7,6 +9,9 @@ class Manager extends Employee {
   }
   getRole() {return 'Manager'};
 }
+
+
+// inquire prompts for the manager: Name, employee ID, email address, office number
 
 
 
