@@ -83,7 +83,7 @@ const nextPersonQuestion = [
     type: 'list',
     name: 'next',
     message: 'Would you like to add another person?',
-    choices: ['Engineer', 'Intern', 'Im done']
+    choices: ['engineer', 'intern', 'Im done']
   },
 ]
 
@@ -119,16 +119,15 @@ createManager();
 const nextPerson = () => {
   inquirer.prompt(nextPersonQuestion)
   .then(answers => {
-    if(answers.choices === 'Engineer'){
+    if(answers.choices === 'engineer'){
       createEngineer();
     } else if(answers.choices === 'Intern'){
       createIntern();
-    // } else (answers.choices === 'Im done') {
-    } else {
-      // createHTML function
-      console.log('Im done');
-    }}
-  )};
+    }else (answers.choices === 'Im done'){
+        createHTML();
+    }
+    })}
+  
 
   // get answers and push to empty array 
   // team function for empty array 
