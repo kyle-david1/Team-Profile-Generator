@@ -14,8 +14,11 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Tests
-  Tests were written for the main Employee class, and the functions contained within. Tests were also written for each of the subclasses of Employee- Manager, Engineer and Intern, and the functions contained within. Jest testing framework was used to complete the tests
+  Tests were written for the main Employee class, and the functions contained within. Tests were also written for each of the subclasses of Employee- Manager, Engineer and Intern, and the functions contained within. Jest testing framework was used to complete the tests.
 
 ## Questions 
-  Github: [https://github.com/kyle-david1](https://github.com/)
+  Github: [https://github.com/kyle-david1](https://github.com/)\n
   Email: kdbaca5892@gmail.com
+
+## Demonstration 
+https://drive.google.com/file/d/1nHRuyrADTuEPBAuVv7RdSndP8kYEWWHV/view?usp=sharing
