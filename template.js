@@ -1,4 +1,6 @@
 const Engineer = require("./library/Engineer")
+const Intern = require('./library/Intern')
+const Manager = require("./library/Manager")
 
 const createHTML = (team) => {
   return `
@@ -19,12 +21,12 @@ const createHTML = (team) => {
   <ul class="list-group list-group-flush">
     <li class="list-group-item">${team[0].name}</li>
     <li class="list-group-item">${team[0].id}</li>
-    <li class="list-group-item">${team[0].email}</li>
+    <li class="list-group-item"><a href = "mailto:${team[0].email}">${team[0].email}</a></li>
     <li class="list-group-item">${team[0].office}</li>
   </ul>
 </div>
  ${makeInterns(team)} 
- ${makeEngineer(team)}
+ ${makeEngineers(team)}
 </body>
 </html>`
 }
@@ -39,12 +41,12 @@ const makeInterns = (team) => {
     if(team[i].getRole() === 'Intern'){
       InternCards += `<div class="card" style="width: 18rem;">
       <div class="card-header">
-        Manager
+        Intern
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">${team[i].name}</li>
         <li class="list-group-item">${team[i].id}</li>
-        <li class="list-group-item">${team[i].email}</li>
+        <li class="list-group-item"><a href = "mailto:${team[i].email}">${team[i].email}</a></li>
         <li class="list-group-item">${team[i].school}</li>
       </ul>
     </div>`
@@ -53,12 +55,26 @@ const makeInterns = (team) => {
   return InternCards;
 }
 
-const makeEngineer = (team) => {
+const makeEngineers = (team) => {
   console.log(team)
   let engineerCards = ""
   for(i = 0; i < team.length; i++){
     console.log(team[i].getRole())
+    if(team[i].getRole() === 'Engineer') {
+      engineerCards += `<div class="card" style="width: 18rem;">
+      <div class="card-header">
+        Engineer
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">${team[i].name}</li>
+        <li class="list-group-item">${team[i].id}</li>
+        <li class="list-group-item"><a href = "mailto:${team[i].email}">${team[i].email}</a></li>
+        <li class="list-group-item"><a href = "https://github.com/${team[i].githubUsername}">${team[i].githubUsername}</a></li>
+      </ul>
+    </div>`
+    }
   }
+  return engineerCards;
 }
 
-module.exports = createHTML
+module.exports = createHTML;
